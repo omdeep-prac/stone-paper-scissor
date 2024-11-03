@@ -45,25 +45,24 @@ console.log(b);
 
 
 function rules(a,b){
-    if(a==="ROCK" && b==="SCISSOR"){
-        console.log("YOU LOST THE ROUND");
+    if((a==="ROCK" && b==="SCISSOR") || (a==="PAPER" && b==="ROCK") || (a==="SCISSOR" && b==="PAPER")  ){
+        
         x+=1;
     }
-    else if(a==="PAPER" && b==="ROCK"){
-        console.log("YOU LOST THE ROUND");
-        X+=1;
+    else if(a===b){
+    
+        x+=0;
+        y+=0;
     }
-    else if(a==="SCISSOR" && b==="PAPER"){
-        console.log("YOU LOST THE ROUND");
-        x+=1;
-    }
+    
     else{
-        console.log("YOU WON THE ROUND");
+        
         y+=1;
     }
-    console.log(`your score is :${x} `) ;
-    console.log(`computer score is :${y} `) ;
+    console.log(`Your score is :${y} `) ;
+    console.log(`computer score is :${x} `) ;
 }
+rules(a,b);
 }
 let comps=x;
 let hums=y;
